@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEET 2026 Answer Key — Trishwi Educational Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1a237e;
+    --primary-light: #283593;
+    --accent: #ff6f00;
+    --accent-light: #ffa000;
+    --bg: #f0f4ff;
+    --white: #ffffff;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --text-muted: #5c6bc0;
+    --border: #c5cae9;
+    --success: #2e7d32;
+    --success-bg: #e8f5e9;
+    --danger: #c62828;
+    --danger-bg: #ffebee;
+    --shadow: 0 4px 24px rgba(26,35,126,0.10);
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, var(--primary) 0%, #0d47a1 60%, #1565c0 100%);
+    color: white;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 280px; height: 280px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -40px;
+    width: 200px; height: 200px;
+    background: rgba(255,111,0,0.10);
+    border-radius: 50%;
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 24px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .logo-box {
+    width: 62px; height: 62px;
+    background: var(--accent);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px;
+    font-weight: 800;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(255,111,0,0.4);
+    letter-spacing: -1px;
+  }
+  .header-text h1 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  .header-text .org {
+    font-size: 13px;
+    color: rgba(255,255,255,0.72);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+  .header-text .org span {
+    color: #ffcc02;
+    font-weight: 600;
+  }
+  .header-meta {
+    margin-left: auto;
+    text-align: right;
+  }
+  .header-meta .date-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: white;
+    border-radius: 8px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .header-meta .nta {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 5px;
+  }
+
+  /* MAIN */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 16px 48px;
+  }
+
+  /* CONTROLS */
+  .controls-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px 24px;
+    margin-bottom: 24px;
+    border: 1px solid var(--border);
+  }
+  .controls-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  .booklet-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 2px solid var(--border);
+    background: var(--bg);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all 0.18s;
+    font-family: 'Poppins', sans-serif;
+  }
+  .tab-btn:hover { border-color: var(--primary); color: var(--primary); }
+  .tab-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    box-shadow: 0 2px 10px rgba(26,35,126,0.25);
+  }
+
+  .divider { width: 1px; height: 36px; background: var(--border); margin: 0 4px; }
+
+  /* Check section */
+  .check-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-end;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .check-group { display: flex; flex-direction: column; gap: 4px; }
+  .check-group label { font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .check-group input, .check-group select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1.5px solid var(--border);
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .check-group input { width: 90px; }
+  .check-group input:focus, .check-group select:focus { border-color: var(--primary); }
+  .check-btn {
+    padding: 8px 22px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.15s, transform 0.1s;
+    align-self: flex-end;
+  }
+  .check-btn:hover { background: var(--primary-light); }
+  .check-btn:active { transform: scale(0.97); }
+  .result-pill {
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    align-self: flex-end;
+    display: none;
+  }
+  .pill-correct { background: var(--success-bg); color: var(--success); border: 1.5px solid #a5d6a7; }
+  .pill-wrong { background: var(--danger-bg); color: var(--danger); border: 1.5px solid #ef9a9a; }
+
+  /* Download */
+  .dl-btn {
+    margin-left: auto;
+    padding: 8px 20px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: background 0.15s;
+    align-self: flex-start;
+    box-shadow: 0 2px 10px rgba(255,111,0,0.25);
+  }
+  .dl-btn:hover { background: var(--accent-light); }
+  .dl-icon { font-size: 16px; }
+
+  /* LEGEND */
+  .legend {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .legend-dot {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .d1 { background: #dbeafe; color: #1e3a8a; }
+  .d2 { background: #dcfce7; color: #14532d; }
+  .d3 { background: #fef3c7; color: #78350f; }
+  .d4 { background: #fce7f3; color: #831843; }
+
+  /* GRID */
+  .grid-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px 16px;
+    border: 1px solid var(--border);
+  }
+  .grid-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .grid-title .code-badge {
+    background: var(--primary);
+    color: white;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  .qa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 6px;
+  }
+  .qa-pair {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 10px;
+    border-radius: 9px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    transition: box-shadow 0.15s;
+  }
+  .qa-pair:hover { box-shadow: 0 2px 10px rgba(26,35,126,0.10); }
+  .qa-pair.highlight { border: 2px solid var(--accent); background: #fff8f0; }
+  .q-num { font-size: 12px; color: #78909c; font-weight: 500; }
+  .ans-dot {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .a1 { background: #dbeafe; color: #1e3a8a; }
+  .a2 { background: #dcfce7; color: #14532d; }
+  .a3 { background: #fef3c7; color: #78350f; }
+  .a4 { background: #fce7f3; color: #831843; }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 24px 16px;
+    font-size: 12px;
+    color: #9fa8da;
+  }
+  .footer strong { color: var(--primary); }
+
+  @media(max-width: 600px) {
+    .header-inner { flex-wrap: wrap; gap: 12px; }
+    .header-meta { margin-left: 0; text-align: left; }
+    .controls-top { flex-direction: column; align-items: flex-start; }
+    .dl-btn { margin-left: 0; }
+    .qa-grid { grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); }
+  }
+
+  @media print {
+    body { background: white; }
+    .check-row, .dl-btn { display: none !important; }
+    .controls-card, .grid-card { box-shadow: none; border: 1px solid #ccc; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="logo-box">T</div>
+    <div class="header-text">
+      <h1>NEET (UG) 2026 — Provisional Answer Key</h1>
+      <div class="org">By <span>Trishwi Educational Services</span> &nbsp;·&nbsp; National Testing Agency</div>
+    </div>
+    <div class="header-meta">
+      <div class="date-badge">📅 Exam: 03 May 2026</div>
+      <div class="nta">Provisional · Subject to change</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- Controls Card -->
+  <div class="controls-card">
+    <div class="controls-top">
+      <div>
+        <div class="section-label">Test Booklet Code चुनें</div>
+        <div class="booklet-tabs">
+          <button class="tab-btn active" onclick="switchBooklet(11, this)">Code 11</button>
+          <button class="tab-btn" onclick="switchBooklet(12, this)">Code 12</button>
+          <button class="tab-btn" onclick="switchBooklet(13, this)">Code 13</button>
+          <button class="tab-btn" onclick="switchBooklet(14, this)">Code 14</button>
+        </div>
+      </div>
+      <button class="dl-btn" onclick="downloadPDF()">
+        <span class="dl-icon">⬇</span> Download PDF
+      </button>
+    </div>
+
+    <!-- Check Answer -->
+    <div class="check-row">
+      <div class="check-group">
+        <label>Question No.</label>
+        <input type="number" id="chk-q" min="1" max="180" placeholder="1 – 180" />
+      </div>
+      <div class="check-group">
+        <label>Aapka Answer</label>
+        <select id="chk-a">
+          <option value="">— चुनें —</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+          <option value="4">Option 4</option>
+        </select>
+      </div>
+      <button class="check-btn" onclick="checkAnswer()">✓ Check Karo</button>
+      <div class="result-pill pill-correct" id="res-correct">✅ Sahi Hai!</div>
+      <div class="result-pill pill-wrong" id="res-wrong">❌ Galat — Sahi Ans: <strong id="correct-ans"></strong></div>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <span style="font-size:12px;font-weight:600;color:var(--text-muted);">Color Code:</span>
+    <div class="legend-item"><div class="legend-dot d1">1</div> Option 1</div>
+    <div class="legend-item"><div class="legend-dot d2">2</div> Option 2</div>
+    <div class="legend-item"><div class="legend-dot d3">3</div> Option 3</div>
+    <div class="legend-item"><div class="legend-dot d4">4</div> Option 4</div>
+    <span style="font-size:12px;color:#b0bec5;margin-left:auto;">कुल प्रश्न: 180</span>
+  </div>
+
+  <!-- Grid Card -->
+  <div class="grid-card" id="grid-card">
+    <div class="grid-title">
+      Answer Key — <span class="code-badge" id="code-label">Booklet Code 11</span>
+    </div>
+    <div class="qa-grid" id="qa-grid"></div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <strong>Trishwi Educational Services</strong> &nbsp;·&nbsp;
+  NEET (UG) 2026 Provisional Answer Key &nbsp;·&nbsp;
+  NTA द्वारा जारी · किसी भी विवाद के लिए NTA की आधिकारिक वेबसाइट देखें
+</div>
+
+<script>
+const keys = {
+  11: [4,4,4,3,3,4,1,3,4,3,4,2,4,2,1,2,1,4,4,3,2,4,1,3,3,3,1,3,4,4,4,1,4,4,2,1,4,4,1,2,3,3,2,1,3,2,4,3,3,4,2,4,4,2,1,1,3,4,2,1,4,4,3,1,2,4,2,2,2,1,1,2,2,2,1,1,3,2,4,3,4,2,4,2,3,1,2,1,2,3,4,2,3,3,1,1,3,1,4,4,4,2,4,3,1,3,3,1,3,1,4,1,3,4,1,3,1,2,1,4,4,2,2,1,4,3,3,3,4,2,1,3,1,2,2,3,4,3,1,3,3,4,1,1,3,4,2,4,1,2,3,1,4,2,1,2,3,4,1,1,4,2,2,4,2,4,2,3,1,3,1,1,4,4,4,3,1,1,3,3],
+  12: [1,1,2,3,1,3,3,1,1,1,1,1,1,3,1,4,4,4,2,1,4,4,1,2,3,2,4,3,2,4,2,4,1,1,4,1,1,4,4,4,3,1,4,2,1,4,2,3,3,1,2,4,4,2,1,3,1,3,3,1,2,3,4,3,1,2,2,3,1,2,1,2,4,1,3,2,1,3,2,1,3,4,1,4,2,2,3,4,4,3,2,1,1,2,2,2,1,3,3,3,3,4,2,2,1,3,4,1,3,3,4,3,3,3,3,1,4,4,4,4,1,2,2,1,4,3,2,2,2,1,3,2,1,3,2,3,2,2,3,2,4,3,1,4,4,3,1,2,2,4,1,4,3,4,1,3,2,1,1,4,2,2,4,1,1,2,1,3,2,2,1,1,1,2,3,2,2,4,1,4],
+  13: [4,3,4,4,3,2,2,2,4,1,4,1,3,1,3,2,2,4,2,2,4,4,2,1,3,2,3,4,3,3,2,4,3,4,1,2,1,4,1,3,3,4,4,2,4,3,2,2,3,4,1,4,3,1,2,2,3,2,3,2,3,3,2,1,2,4,4,2,3,2,4,3,4,1,1,3,4,1,1,1,2,3,1,1,3,1,2,3,2,4,2,1,1,1,3,2,1,2,4,1,4,4,4,3,4,4,4,3,2,4,4,3,4,1,2,2,4,3,3,1,4,1,1,2,1,1,3,4,1,3,3,2,2,4,1,3,4,3,3,1,4,4,2,3,1,3,4,3,1,4,2,2,3,4,3,3,4,1,3,3,3,4,4,3,4,3,2,2,3,3,4,4,4,2,3,4,2,1,2,1],
+  14: [4,4,3,4,2,2,1,3,2,1,4,3,3,3,2,4,2,4,2,4,2,2,2,1,1,4,4,1,3,2,4,2,2,2,2,3,4,2,4,2,1,3,4,1,1,2,2,1,4,4,3,3,1,1,2,3,3,1,1,3,1,4,2,4,4,2,2,3,3,4,1,2,4,4,3,3,3,3,2,1,3,2,3,1,2,4,4,4,4,4,1,1,2,2,1,4,1,1,2,3,1,2,4,4,4,4,3,4,1,4,2,3,4,4,4,4,3,4,4,1,2,1,4,3,4,4,2,2,2,1,3,3,3,1,3,3,3,1,1,1,4,3,2,2,1,1,2,3,1,2,3,4,4,3,3,3,1,2,4,4,1,2,1,1,3,3,4,4,2,2,1,4,4,2,3,2,3,2,1,2]
+};
+
+let current = 11;
+let highlighted = -1;
+
+function switchBooklet(code, btn) {
+  current = code;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('code-label').textContent = 'Booklet Code ' + code;
+  document.getElementById('res-correct').style.display = 'none';
+  document.getElementById('res-wrong').style.display = 'none';
+  highlighted = -1;
+  render();
+}
+
+function render() {
+  const data = keys[current];
+  const classes = ['','a1','a2','a3','a4'];
+  let html = '';
+  for (let i = 0; i < 180; i++) {
+    const q = i + 1;
+    const a = data[i];
+    const hl = (q === highlighted) ? ' highlight' : '';
+    html += `<div class="qa-pair${hl}" id="qp-${q}">
+      <span class="q-num">${q}</span>
+      <span class="ans-dot ${classes[a]}">${a}</span>
+    </div>`;
+  }
+  document.getElementById('qa-grid').innerHTML = html;
+  if (highlighted > 0) {
+    const el = document.getElementById('qp-' + highlighted);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+function checkAnswer() {
+  const qVal = parseInt(document.getElementById('chk-q').value);
+  const aVal = parseInt(document.getElementById('chk-a').value);
+  const correct = document.getElementById('res-correct');
+  const wrong = document.getElementById('res-wrong');
+  correct.style.display = 'none';
+  wrong.style.display = 'none';
+  if (!qVal || qVal < 1 || qVal > 180 || !aVal) {
+    alert('Kripya sahi question number (1-180) aur option chunein.');
+    return;
+  }
+  const correctAns = keys[current][qVal - 1];
+  highlighted = qVal;
+  render();
+  if (aVal === correctAns) {
+    correct.style.display = 'inline-block';
+  } else {
+    document.getElementById('correct-ans').textContent = correctAns;
+    wrong.style.display = 'inline-block';
+  }
+}
+
+function downloadPDF() {
+  window.print();
+}
+
+render();
+</script>
+</body>
+</html>
